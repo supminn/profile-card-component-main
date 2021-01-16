@@ -105,7 +105,6 @@ body{
 
 @media only screen and (max-width: 380px){
     body{
-        /* background-color: white; */
         /* background-position: left -18vw top -65vh, right -12vw top 52vh; */
         background-position: left 128% top 60% ,right 125% top -27%;        
     }
