@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+    --DarkCyan: hsl(185, 75%, 39%);
+    --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+    --DarkGrayishBlue: hsl(227, 10%, 46%);
+    --DarkGray: hsl(0, 0%, 59%);
+    --White: white;
+}
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--DarkCyan);
+    background-image: url('/images/bg-pattern-top.svg'),url('/images/bg-pattern-bottom.svg');
+    background-position: left -18vw top -65vh, right -12vw top 52vh;
+    /* background-position: left -45% top 50% ,right -35% top -38%; */
+    background-repeat: no-repeat,no-repeat;
+}
+
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border: 2px solid var(--DarkCyan);
+    border-radius: 1rem;
+    background-color: var(--White);
+}
+
+.bg-card{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin: -1px;
+}
+
+.img-dp{
+    display: block;
+    position: relative;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    border: 0.3rem solid var(--White);
+}
+
+.card-content{
+    position: relative;
+    top: -50%;
+    transform: translate(0,-50%);
+    margin-top: -0.8rem;
+}
+
+.txt-name{
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--VeryDarkDesaturatedBlue);
+}
+
+.txt-place{
+    display: block;
+    margin-block-start: 0.5rem;
+}
+
+.txt-age{
+    font-size: 18px;
+}
+.txt-age,.txt-place, .desc{
+    color: var(--DarkGrayishBlue);
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-component{
+    padding: 1rem;
+    line-height: 1.5rem;
+}
+
+.card-component .value{
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.desc{
+    font-size: 12px;
+}
+
+.attribution {
+    font-size: 11px;
+    position: absolute;
+    bottom: 2%;
+    left: 25%;
+    transform: translate(-50%);
+    color: var(--White);
+}
+
+.attribution a {
+    color: var(--White);
+    font-style: italic;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 380px){
+    body{
+        /* background-color: white; */
+        /* background-position: left -18vw top -65vh, right -12vw top 52vh; */
+        background-position: left 128% top 60% ,right 125% top -27%;        
+    }
+    .card{
+        width: 85%;
+    }
+    .bg-card{
+        width: 100%;
+    }
+    .attribution{
+        left: 50%;
+    }
+}
