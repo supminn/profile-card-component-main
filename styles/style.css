@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
-:root{
+
+:root {
     --DarkCyan: hsl(185, 75%, 39%);
     --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
     --DarkGrayishBlue: hsl(227, 10%, 46%);
@@ -7,84 +8,104 @@
     --White: white;
 }
 
-body{
+body {
     font-family: 'Kumbh Sans', sans-serif;
     background-color: var(--DarkCyan);
-    background-image: url('/images/bg-pattern-top.svg'),url('/images/bg-pattern-bottom.svg');
+    overflow: hidden;
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('/images/bg-pattern-top.svg'),url('/images/bg-pattern-bottom.svg');
     background-position: left -18vw top -65vh, right -12vw top 52vh;
-    /* background-position: left -45% top 50% ,right -35% top -38%; */
-    background-repeat: no-repeat,no-repeat;
+     background-position: left -45% top 50% ,right -35% top -38%; 
+    background-repeat: no-repeat,no-repeat; */
 }
 
-.card{
+.card {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     border: 2px solid var(--DarkCyan);
     border-radius: 1rem;
     background-color: var(--White);
 }
 
-.bg-card{
+.bg-top {
+    position: absolute;
+    bottom: 20%;
+    right: 55%;
+}
+
+.bg-bottom {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+}
+
+.bg-card {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     margin: -1px;
 }
 
-.img-dp{
+.img-dp {
     display: block;
     position: relative;
     left: 50%;
     top: -50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     border: 0.3rem solid var(--White);
 }
 
-.card-content{
+.card-content {
     position: relative;
     top: -50%;
-    transform: translate(0,-50%);
+    transform: translate(0, -50%);
     margin-top: -0.8rem;
 }
 
-.txt-name{
+.txt-name {
     font-weight: bold;
     font-size: 18px;
     color: var(--VeryDarkDesaturatedBlue);
 }
 
-.txt-place{
+.txt-place {
     display: block;
     margin-block-start: 0.5rem;
 }
 
-.txt-age{
+.txt-age {
     font-size: 18px;
 }
-.txt-age,.txt-place, .desc{
+
+.txt-age,
+.txt-place,
+.desc {
     color: var(--DarkGrayishBlue);
 }
 
-.card-footer{
+.card-footer {
     display: flex;
     justify-content: space-around;
 }
 
-.card-component{
+.card-component {
     padding: 1rem;
     line-height: 1.5rem;
 }
 
-.card-component .value{
+.card-component .value {
     display: block;
     font-weight: bold;
     font-size: 18px;
 }
 
-.desc{
+.desc {
     font-size: 12px;
 }
 
@@ -103,18 +124,16 @@ body{
     font-weight: bold;
 }
 
-@media only screen and (max-width: 380px){
-    body{
-        /* background-position: left -18vw top -65vh, right -12vw top 52vh; */
-        background-position: left 128% top 60% ,right 125% top -27%;        
-    }
-    .card{
+@media only screen and (max-width: 380px) {
+    .card {
         width: 85%;
     }
-    .bg-card{
+
+    .bg-card {
         width: 100%;
     }
-    .attribution{
+
+    .attribution {
         left: 50%;
     }
 }
