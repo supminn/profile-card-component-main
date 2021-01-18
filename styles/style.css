@@ -64,10 +64,13 @@ body{
 .txt-age{
     font-size: 18px;
 }
-.txt-age,.txt-place, .desc, hr{
+.txt-age,.txt-place, .desc{
     color: var(--DarkGrayishBlue);
 }
 
+hr{
+    color: var(--DarkGray);
+}
 .card-footer{
     display: flex;
     justify-content: space-around;
